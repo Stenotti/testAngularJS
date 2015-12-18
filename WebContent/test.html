@@ -1,0 +1,19 @@
+<div class="panel-heading clearfix" style="padding: 10px; background-color: #ddd;">
+	<div class="pull-left"><b>Test Web Service</b></div>
+</div>
+<div class="panel panel-default" ng-controller="testController as testCtrl" style="padding: 25px; border-color: #ddd;">
+	<div class="panel-body" class="col-12">
+	    <div>
+	        <p>Nome: <input type="text" ng-model="user.name"></p>
+	        <p>Cognome: <input type="text" ng-model="user.surname"></p>  
+	        <p><b>{{ sayHello() | uppercase }}</b></p>      
+	        <p>Dollari: <input type="number" ng-model="number">  {{ number | currency }}</p>
+	        <p>Data: <input type="date" ng-model="date">  {{ date | date: 'MM/dd/yyyy HH:mm' }}</p>
+	        {{ testCtrl.testVariable }}
+	        <!-- Altri esempi di filtri:
+	         	- limitTo: 3
+	         	- orderBy: 'field'
+	          -->
+	    </div>
+   </div>
+</div>

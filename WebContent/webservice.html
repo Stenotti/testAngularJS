@@ -1,0 +1,38 @@
+<div class="panel-heading clearfix" style="padding: 10px; background-color: #ddd;">
+	<div class="pull-left"><b>Test Web Service</b></div>
+</div>
+<div class="panel panel-default" ng-controller="webServiceController" style="padding: 25px; border-color: #ddd;">
+	<div class="panel-body" class="col-12">
+		<p>Ciao {{ user.name }}</p>
+        <p><b>WS</b>: https://public-api.wordpress.com/rest/v1.1/sites/{{site}}</p>
+	
+    	<b>Sito</b>: <input type="text" ng-model="site" />
+    	<button type="button" ng-click="sendRequest()" >Invia</button><br><br>
+        <div class="row"><b>Risposta WS</b>: <br> {{ response }}</div>
+        
+        <div ng-repeat="(key, value) in response" class="row">
+        	<div ng-if="angular.isObject(value) === false">
+        		<p><b>{{key}}:</b> {{value}}</p>
+        	</div>
+        	<div ng-if="angular.isObject(value) === true">
+        		<p><b>{{key}}:</b></p>
+        		<ul>
+	        		<li ng-repeat="(key2, value2) in value">
+	        			<div ng-if="angular.isObject(value2) === false">
+			        		<p><b>{{key2}}:</b> {{value2}}</p>
+			        	</div>
+	        			<div ng-if="angular.isObject(value2) === true">
+        					<p><b>{{key2}}:</b></p>
+			        		<ul>
+				        		<li ng-repeat="(key3, value3) in value2">
+				        			<p><b>{{key3}}:</b> {{value3}}</p>
+				        		</li>
+			        		</ul>
+			        	</div>
+	        		</li>
+        		</ul>
+        	</div>
+        </div>
+        <br>
+	</div>
+</div>

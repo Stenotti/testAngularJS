@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="angularExample">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Moto GP riders</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-resource.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+    
+	<!-- javascript da includere -->
+    <script src="app.js"></script>
+    <script src="services.js"></script>
+    <script src="timer.js"></script>
+    <script src="controller.js"></script>
+    
+    <!-- 
+    - Non è una libreria ma un framework
+    - "Client-side framework utilizzato per aggiungere interattività all'HTML"
+	- Perfetto per Single Page Application (pagina HTML parent caricata una volta e cambiano solo i contenuti)
+	- Supporto al pattern MVC (MVVM, Model e View non si conoscono direttamente ma comunicano tramite il View Model che funge da proxy)
+	- Binding bidirezionale (le variabili possono essere create/modificate sia nella view che nel model)
+	- Separazione delle competenze (ogni pagina ha un suo controller) (https://docs.angularjs.org/guide/scope)
+	- Riusabilità del codice (direttive custom, Dependency Injection) (https://docs.angularjs.org/guide/di)
+     -->
+
+	<!-- foglio di stile da includere -->
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="col-md-10">
+			<ul class="nav navbar-nav">
+   	            <li><a ng-href="#/riders"><b>Riders</b></a></li>
+   	            <li><a ng-href="#/webservice"><b>Web Service</b></a></li>
+   	            <li><a ng-href="#/test"><b>Test</b></a></li>
+   	            <li class="pull-right"><a ng-href=""><b>Ora esatta: <time></time></b></a></li>
+			</ul>
+		</div>
+	</nav>
+	<div id="wrapper" class="container" ng-view></div>
+</body>
+</html>

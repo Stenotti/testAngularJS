@@ -1,0 +1,116 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>TestAngularJS</groupId>
+  <artifactId>TestAngularJS</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <warSourceDirectory>WebContent</warSourceDirectory>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+		<!-- ANGULAR DEPENDENCIES -->	 
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.webjars</groupId> -->
+<!-- 			<artifactId>angularjs</artifactId> -->
+<!-- 			<version>1.2.26</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.webjars</groupId> -->
+<!-- 			<artifactId>bootstrap</artifactId> -->
+<!-- 			<version>3.2.0</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.webjars</groupId> -->
+<!-- 			<artifactId>angular-ui-bootstrap</artifactId> -->
+<!-- 			<version>0.11.0-2</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.webjars</groupId> -->
+<!-- 			<artifactId>angular-ui-router</artifactId> -->
+<!-- 			<version>0.2.11</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.webjars</groupId> -->
+<!-- 			<artifactId>angular-translate</artifactId> -->
+<!-- 			<version>2.2.0</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.webjars</groupId> -->
+<!-- 			<artifactId>angular-xeditable</artifactId> -->
+<!-- 			<version>0.1.8</version> -->
+<!-- 		</dependency>		 -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.webjars</groupId> -->
+<!-- 			<artifactId>angular-ui-select</artifactId> -->
+<!-- 			<version>0.8.3</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.webjars</groupId> -->
+<!-- 			<artifactId>angular-file-upload</artifactId> -->
+<!-- 			<version>1.6.12</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.webjars</groupId> -->
+<!-- 			<artifactId>angular-local-storage</artifactId> -->
+<!-- 			<version>0.1.5</version> -->
+<!-- 		</dependency>		 -->
+  	<dependency>
+  		<groupId>org.webjars</groupId>
+  		<artifactId>angularjs</artifactId>
+  		<version>1.2.26</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.webjars</groupId>
+  		<artifactId>angular-file-upload</artifactId>
+  		<version>1.6.12</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.webjars</groupId>
+  		<artifactId>angular-local-storage</artifactId>
+  		<version>0.1.5</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.webjars</groupId>
+  		<artifactId>angular-translate</artifactId>
+  		<version>2.2.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.webjars</groupId>
+  		<artifactId>angular-xeditable</artifactId>
+  		<version>0.1.8</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.webjars</groupId>
+  		<artifactId>angular-ui-select</artifactId>
+  		<version>0.8.3</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.webjars</groupId>
+  		<artifactId>angular-ui-router</artifactId>
+  		<version>0.2.11</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.webjars</groupId>
+  		<artifactId>angular-ui-bootstrap</artifactId>
+  		<version>0.11.0-2</version>
+  	</dependency>
+  </dependencies>
+</project>

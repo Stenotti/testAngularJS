@@ -1,0 +1,25 @@
+<div class="panel-heading clearfix" style="padding: 10px; background-color: #ddd;">
+	<div class="pull-left"><b>Riders</b></div>
+</div>
+<br><p>Ciao {{ user.name }}</p>
+<div class="panel panel-default" ng-controller="ridersListController" style="padding: 25px; border-color: #ddd;">
+	<div class="panel-body">
+		<p>Ciao {{ user.name }}</p>
+		<input type="text" ng-model="query" placeholder="Search..."/><br><br>
+		<ul class="rider-list">
+		    <li ng-repeat="rider in riders | filter:query | orderBy:'number'"> <!-- 'number'/'-number' per l'ordinamento crescente/decrescente -->
+		        <a href="#/riders/{{rider.number}}">
+		            <img ng-src="img/riders/{{rider.number}}.jpg" alt="{{rider.name}}"/>
+		            <div class="info">
+		                <p class="flag-n">
+		                    <img alt="{{rider.nation}}" ng-src="img/nation/{{rider.nation}}.png" height="27" width="42">
+		                    <span class="num">{{rider.number}}</span>
+		                </p>
+		
+		                <p class="name">{{rider.name}}</p>
+		            </div>
+		        </a>
+		    </li>
+		</ul>
+	</div>
+</div>
